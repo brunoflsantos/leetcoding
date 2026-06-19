@@ -1,5 +1,5 @@
 // Link: https://leetcode.com/problems/contains-duplicate/
-package main_217_contains_duplicate
+package containsduplicate
 
 // Complexity: O(n)
 func containsDuplicate(nums []int) bool {
