@@ -7,7 +7,7 @@ func search(nums []int, target int) int {
 }
 
 func _search(nums []int, i int, j int, target int) int {
-	if i > j { // Array size 1: element not found
+	if i > j { // Element not found
 		return -1
 	}
 	midIndex := i + (j-i)/2
