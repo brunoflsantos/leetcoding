@@ -1,5 +1,5 @@
 // Link: https://leetcode.com/problems/maximum-number-of-balloons
-package maximumnumberofbaloons
+package maximumnumberofballoons
 
 // Complexity: O(n)
 func maxNumberOfBalloons(text string) int {
