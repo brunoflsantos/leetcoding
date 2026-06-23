@@ -1,4 +1,4 @@
-package pascaltriangle
+package climbingstarts
 
 import (
 	"reflect"
@@ -6,17 +6,11 @@ import (
 )
 
 func TestGenerate1(t *testing.T) {
-	numRows := 5
+	n := 2
 
-	expected := [][]int{
-		{1},
-		{1, 1},
-		{1, 2, 1},
-		{1, 3, 3, 1},
-		{1, 4, 6, 4, 1},
-	}
+	expected := 2
 
-	result := generate(numRows)
+	result := climbStairs(n)
 
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
@@ -24,13 +18,23 @@ func TestGenerate1(t *testing.T) {
 }
 
 func TestGenerate2(t *testing.T) {
-	numRows := 1
+	n := 3
 
-	expected := [][]int{
-		{1},
+	expected := 3
+
+	result := climbStairs(n)
+
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
+}
 
-	result := generate(numRows)
+func TestGenerate3(t *testing.T) {
+	n := 5
+
+	expected := 8
+
+	result := climbStairs(n)
 
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
