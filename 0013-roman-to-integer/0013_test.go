@@ -1,4 +1,4 @@
-package climbingstarts
+package romantointeger
 
 import (
 	"reflect"
@@ -6,27 +6,26 @@ import (
 )
 
 func TestCase1(t *testing.T) {
-	n := 2
-	expected := 2
-	result := climbStairs(n)
+	s := "III"
+	expected := 3
+	result := romanToInt(s)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
 
 func TestCase2(t *testing.T) {
-	n := 3
-	expected := 3
-	result := climbStairs(n)
+	s := "LVIII"
+	expected := 58
+	result := romanToInt(s)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
-
 func TestCase3(t *testing.T) {
-	n := 5
-	expected := 8
-	result := climbStairs(n)
+	s := "MCMXCIV"
+	expected := 1994
+	result := romanToInt(s)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}

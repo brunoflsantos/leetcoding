@@ -5,9 +5,8 @@ import (
 	"testing"
 )
 
-func TestGenerate1(t *testing.T) {
+func TestCase1(t *testing.T) {
 	numRows := 5
-
 	expected := [][]int{
 		{1},
 		{1, 1},
@@ -15,23 +14,18 @@ func TestGenerate1(t *testing.T) {
 		{1, 3, 3, 1},
 		{1, 4, 6, 4, 1},
 	}
-
 	result := generate(numRows)
-
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
 
-func TestGenerate2(t *testing.T) {
+func TestCase2(t *testing.T) {
 	numRows := 1
-
 	expected := [][]int{
 		{1},
 	}
-
 	result := generate(numRows)
-
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}

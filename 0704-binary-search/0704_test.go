@@ -1,4 +1,4 @@
-package climbingstarts
+package binarysearch
 
 import (
 	"reflect"
@@ -6,27 +6,20 @@ import (
 )
 
 func TestCase1(t *testing.T) {
-	n := 2
-	expected := 2
-	result := climbStairs(n)
+	nums := []int{-1, 0, 3, 5, 9, 12}
+	target := 9
+	expected := 4
+	result := search(nums, target)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
 
 func TestCase2(t *testing.T) {
-	n := 3
-	expected := 3
-	result := climbStairs(n)
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
-	}
-}
-
-func TestCase3(t *testing.T) {
-	n := 5
-	expected := 8
-	result := climbStairs(n)
+	nums := []int{-1, 0, 3, 5, 9, 12}
+	target := 2
+	expected := -1
+	result := search(nums, target)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}

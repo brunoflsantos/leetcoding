@@ -1,4 +1,4 @@
-package climbingstarts
+package maximumnumberofballoons
 
 import (
 	"reflect"
@@ -6,27 +6,27 @@ import (
 )
 
 func TestCase1(t *testing.T) {
-	n := 2
-	expected := 2
-	result := climbStairs(n)
+	text := "nlaebolko"
+	expected := 1
+	result := maxNumberOfBalloons(text)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
 
 func TestCase2(t *testing.T) {
-	n := 3
-	expected := 3
-	result := climbStairs(n)
+	text := "loonbalxballpoon"
+	expected := 2
+	result := maxNumberOfBalloons(text)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
 
 func TestCase3(t *testing.T) {
-	n := 5
-	expected := 8
-	result := climbStairs(n)
+	text := "leetcode"
+	expected := 0
+	result := maxNumberOfBalloons(text)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}

@@ -1,4 +1,4 @@
-package climbingstarts
+package twosum
 
 import (
 	"reflect"
@@ -6,27 +6,30 @@ import (
 )
 
 func TestCase1(t *testing.T) {
-	n := 2
-	expected := 2
-	result := climbStairs(n)
+	nums := []int{2, 7, 11, 15}
+	target := 9
+	expected := []int{0, 1}
+	result := twoSum(nums, target)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
 
 func TestCase2(t *testing.T) {
-	n := 3
-	expected := 3
-	result := climbStairs(n)
+	nums := []int{3, 2, 4}
+	target := 6
+	expected := []int{1, 2}
+	result := twoSum(nums, target)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
 }
 
 func TestCase3(t *testing.T) {
-	n := 5
-	expected := 8
-	result := climbStairs(n)
+	nums := []int{3, 3}
+	target := 6
+	expected := []int{0, 1}
+	result := twoSum(nums, target)
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Error! Result: %v, Expected: %v", result, expected)
 	}
