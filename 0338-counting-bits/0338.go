@@ -1,20 +1,11 @@
 package countingbits
 
 func countBits(n int) []int {
-	result := make([]int, n+1)
-	for i := range result {
-		result[i] = countSetBits(i)
+	ans := make([]int, n+1)
+	for i := 1; i <= n; i++ {
+		// ans[i/2] takes the previous result already calculated
+		// (i % 2) adds 1 if the number is odd
+		ans[i] = ans[i/2] + (i % 2)
 	}
-	return result
-}
-
-// countSetBits implements the Brian Kernighan's Algorithm for counting the 1's in
-// the bit representation of a number
-func countSetBits(num int) int {
-	count := 0
-	for num > 0 {
-		num = num & (num - 1)
-		count++
-	}
-	return count
+	return ans
 }
