@@ -1,16 +1,7 @@
+// Link: https://leetcode.com/problems/is-subsequence
 package issubsequence
 
-// Example 1:
-// Input: s = "abc", t = "ahbgdc"
-// Output: true
-
-// Example 2:
-// Input: s = "axc", t = "ahbgdc"
-// Output: false
-
-// s -> nil
-// t -> nil
-
+// Complexity: O(n), where n = len(t)
 func isSubsequence(s string, t string) bool {
 	i, j := 0, 0
 	result := false
